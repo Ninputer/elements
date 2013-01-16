@@ -1,0 +1,36 @@
+﻿@model elements.Models.Collection
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Collection</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ElementNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ElementNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Storage)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Storage)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CollectionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
